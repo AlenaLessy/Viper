@@ -1,0 +1,17 @@
+strings:
+    inputs:
+      - Viper/Localizable.strings
+    outputs:
+        templateName: structured-swift5
+        output: Viper/Strings+Generated.swift
+        params:
+          enumName: Constants
+            
+xcassets:
+    inputs:
+      - Viper/Assets.xcassets
+    outputs:
+        templateName: swift5
+        output: Viper/XCAssets+Generated.swift
+        params:
+          enumName: Images
