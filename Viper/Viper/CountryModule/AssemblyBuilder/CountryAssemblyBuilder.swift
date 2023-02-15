@@ -8,7 +8,7 @@
 import UIKit
 
 /// Сборщик модулей экрана страны
-final class CountryAssemblyBuilder: CountryAssemblyBuilderProtocol {
+final class CountryAssembly: CountryAssemblyProtocol {
     
     // MARK: - Public Methods
     

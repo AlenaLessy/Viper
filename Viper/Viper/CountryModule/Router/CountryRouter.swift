@@ -12,7 +12,7 @@ final class CountryRouter: CountryRouterInputProtocol {
     
     // MARK: - Public Properties
     
-    let assemblyBuilder: CountryAssemblyBuilderProtocol?
+    let assembly: CountryAssemblyProtocol?
     let navigationController: UINavigationController?
     
     // MARK: - Private Properties
@@ -21,8 +21,8 @@ final class CountryRouter: CountryRouterInputProtocol {
 
     // MARK: - Initializers
     
-    init(assemblyBuilder: CountryAssemblyBuilderProtocol, navigationController: UINavigationController) {
-        self.assemblyBuilder = assemblyBuilder
+    init(assembly: CountryAssemblyProtocol, navigationController: UINavigationController) {
+        self.assembly = assembly
         self.navigationController = navigationController
     }
 
@@ -30,7 +30,7 @@ final class CountryRouter: CountryRouterInputProtocol {
     
     func initialViewController() {
         guard let navigationController,
-              let viewController = assemblyBuilder?.makeCountryModule(router: self) else { return }
+              let viewController = assembly?.makeCountryModule(router: self) else { return }
         navigationController.viewControllers = [viewController]
     }
     

@@ -3,7 +3,7 @@
 
 import UIKit
 
-/// Ячейка отелей
+/// Ячейка экрана отелей
 final class HotelsTableViewCell: UITableViewCell {
  
     // MARK: - Private Visual Components

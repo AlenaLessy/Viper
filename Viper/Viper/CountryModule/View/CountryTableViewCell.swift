@@ -3,7 +3,7 @@
 
 import UIKit
 
-/// Ячейка страны
+/// Ячейка экрана стран
 final class CountryTableViewCell: UITableViewCell {
  
     // MARK: - Private Visual Components

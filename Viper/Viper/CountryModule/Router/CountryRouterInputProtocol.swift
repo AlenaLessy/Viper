@@ -9,7 +9,7 @@ import Foundation
 
 /// Протокол роутера экрана страны
 protocol CountryRouterInputProtocol {
-    var assemblyBuilder: CountryAssemblyBuilderProtocol? { get }
+    var assembly: CountryAssemblyProtocol? { get }
     
     func goToHotel(index: Int)
 }

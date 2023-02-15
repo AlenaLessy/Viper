@@ -15,9 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let assemblyBuilder = CountryAssemblyBuilder()
+        let assembly = CountryAssembly()
         let navigationController = UINavigationController()
-        let router = CountryRouter(assemblyBuilder: assemblyBuilder, navigationController: navigationController)
+        let router = CountryRouter(assembly: assembly, navigationController: navigationController)
         router.initialViewController()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

@@ -1,5 +1,5 @@
 //
-//  HotelsAssemblyBuilder.swift
+//  HotelsAssembly.swift
 //  Viper
 //
 //  Created by Алена Панченко on 14.02.2023.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// Сборщик модулей экрана отелей
-final class HotelsAssemblyBuilder: HotelsAssemblyBuilderProtocol {
+final class HotelsAssembly: HotelsAssemblyProtocol {
     
     // MARK: - Public Methods
     

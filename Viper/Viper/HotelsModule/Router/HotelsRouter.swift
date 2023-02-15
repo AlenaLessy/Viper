@@ -12,12 +12,12 @@ final class HotelsRouter: HotelsRouterInputProtocol {
     
     // MARK: - Public Properties
     
-    let assemblyBuilder = HotelsAssemblyBuilder()
+    let assembly = HotelsAssembly()
 
     // MARK: - Public Methods
       
     func pushViewController(index: Int, navigationViewController: UINavigationController) {
-        let viewController = assemblyBuilder.makeHotelsModule(router: self, index: index)
+        let viewController = assembly.makeHotelsModule(router: self, index: index)
         navigationViewController.pushViewController(viewController, animated: true)
     }
 }
