@@ -135,7 +135,7 @@
 				576242B5299CAF9700D8320E /* View */,
 				576242A9299CAF9700D8320E /* Presenter */,
 				576242AA299CAF9700D8320E /* AssemblyBuilder */,
-				576242B1299CAF9700D8320E /* Interator */,
+				576242B1299CAF9700D8320E /* Interaсtor */,
 				576242BA299CAF9700D8320E /* Router */,
 			);
 			name = CountryModule;
@@ -159,14 +159,14 @@
 			path = AssemblyBuilder;
 			sourceTree = "<group>";
 		};
-		576242B1299CAF9700D8320E /* Interator */ = {
+		576242B1299CAF9700D8320E /* Interaсtor */ = {
 			isa = PBXGroup;
 			children = (
 				576242AD299CAF9700D8320E /* CountryInterator.swift */,
 				576242A7299CAF9700D8320E /* CountryInteractorOutputProtocol.swift */,
 				576242A6299CAF9700D8320E /* CountryInteractorInputProtocol.swift */,
 			);
-			path = Interator;
+			path = "Interaсtor";
 			sourceTree = "<group>";
 		};
 		576242B5299CAF9700D8320E /* View */ = {

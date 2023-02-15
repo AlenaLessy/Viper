@@ -13,10 +13,10 @@ final class HotelsPresenter: HotelsPresenterProtocol {
     // MARK: Public Properties
     
     weak var view: HotelsViewInputProtocol?
-    var interator: HotelsInteractorInputProtocol? {
+    var interactor: HotelsInteractorInputProtocol? {
         didSet {
             guard let index else { return }
-            interator?.fetchHotels(index: index)
+            interactor?.fetchHotels(index: index)
         }
     }
     var router: HotelsRouterInputProtocol?
@@ -31,7 +31,7 @@ final class HotelsPresenter: HotelsPresenterProtocol {
     
     func updateHotels() {
         guard let index else { return }
-        interator?.fetchHotels(index: index)
+        interactor?.fetchHotels(index: index)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  CountryInterator.swift
+//  CountryIntecrator.swift
 //  Viper
 //
 //  Created by Алена Панченко on 13.02.2023.
@@ -8,7 +8,7 @@
 import Foundation
 
 /// Итератор экрана стран
-final class CountryInterator: CountryInteractorInputProtocol {
+final class CountryInteractor: CountryInteractorInputProtocol {
     
     // MARK: - Public Properties
     

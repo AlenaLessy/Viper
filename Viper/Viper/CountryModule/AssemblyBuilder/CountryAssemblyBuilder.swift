@@ -16,17 +16,17 @@ final class CountryAssembly: CountryAssemblyProtocol {
         let presenter = CountryPresenter()
         let view = CountryViewController()
         
-        var interactor = makeInterator()
+        var interactor = makeInteractor()
         view.presenter = presenter
         presenter.view = view
         interactor.presenter = presenter
-        presenter.interator = interactor
+        presenter.interactor = interactor
         presenter.router = router
         return view
     }
     
-    func makeInterator() -> CountryInteractorInputProtocol {
+    func makeInteractor() -> CountryInteractorInputProtocol {
         let networkService = NetworkService()
-        return CountryInterator(networkService: networkService)
+        return CountryInteractor(networkService: networkService)
     }
 }

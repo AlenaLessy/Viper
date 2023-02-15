@@ -17,16 +17,16 @@ final class HotelsAssembly: HotelsAssemblyProtocol {
         let view = HotelsViewController()
         presenter.view = view
         presenter.index = index
-        var interactor = makeInterator()
+        var interactor = makeInteractor()
         view.presenter = presenter
         interactor.presenter = presenter
-        presenter.interator = interactor
+        presenter.interactor = interactor
         presenter.router = router
         return view
     }
     
-    func makeInterator() -> HotelsInteractorInputProtocol {
+    func makeInteractor() -> HotelsInteractorInputProtocol {
         let networkService = NetworkService()
-        return HotelsInterator(networkService: networkService)
+        return HotelsInteractor(networkService: networkService)
     }
 }

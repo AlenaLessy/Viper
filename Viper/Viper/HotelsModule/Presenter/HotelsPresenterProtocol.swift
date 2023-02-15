@@ -10,7 +10,7 @@ import Foundation
 /// Протокол презентера экрана отелей
 protocol HotelsPresenterProtocol: HotelsViewOutputProtocol, HotelsInteractorOutputProtocol {
     var view: HotelsViewInputProtocol? { get }
-    var interator: HotelsInteractorInputProtocol? { get }
+    var interactor: HotelsInteractorInputProtocol? { get }
     var router: HotelsRouterInputProtocol? { get }
     var hotels: Hotels? { get }
     var index: Int? { get }

@@ -13,9 +13,9 @@ final class CountryPresenter: CountryPresenterProtocol {
     // MARK: Public Properties
     
     weak var view: CountryViewInputProtocol?
-    var interator: CountryInteractorInputProtocol? {
+    var interactor: CountryInteractorInputProtocol? {
         didSet {
-            interator?.fetchCountries()
+            interactor?.fetchCountries()
         }
     }
     var router: CountryRouterInputProtocol?
@@ -28,7 +28,7 @@ final class CountryPresenter: CountryPresenterProtocol {
     }
     
     func fetchCountries() {
-        interator?.fetchCountries()
+        interactor?.fetchCountries()
     }
     
     func didSelectRowAt(index: Int) {

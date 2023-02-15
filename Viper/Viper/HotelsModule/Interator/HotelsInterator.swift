@@ -8,7 +8,7 @@
 import Foundation
 
 /// Итератор экрана отелей
-final class HotelsInterator: HotelsInteractorInputProtocol {
+final class HotelsInteractor: HotelsInteractorInputProtocol {
    
     // MARK: - Public Properties
     
