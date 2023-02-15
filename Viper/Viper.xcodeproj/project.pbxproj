@@ -3,26 +3,84 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		086D1691F52F7DDB0CA126F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D91F6C7AD6C965CA229EDAB /* Localizable.strings */; };
 		43C4F96560849F707F088838 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39A6DC3FEE71483BED7AC1 /* XCAssets+Generated.swift */; };
 		479580EC4A2ABEF47707DC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601DDAF87BF40CA2B5624FE /* AppDelegate.swift */; };
+		57054CD7299C86FF005A15D7 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57054CD6299C86FF005A15D7 /* Country.swift */; };
+		57054CEE299C8FE1005A15D7 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57054CED299C8FE1005A15D7 /* NetworkServiceProtocol.swift */; };
+		57624281299C9C1C00D8320E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57624280299C9C1C00D8320E /* NetworkService.swift */; };
+		576242BB299CAF9700D8320E /* CountryInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242A6299CAF9700D8320E /* CountryInteractorInputProtocol.swift */; };
+		576242BC299CAF9700D8320E /* CountryInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242A7299CAF9700D8320E /* CountryInteractorOutputProtocol.swift */; };
+		576242BD299CAF9700D8320E /* CountryPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242A8299CAF9700D8320E /* CountryPresenterProtocol.swift */; };
+		576242BE299CAF9700D8320E /* CountryAssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242AB299CAF9700D8320E /* CountryAssemblyBuilder.swift */; };
+		576242BF299CAF9700D8320E /* CountryAssemblyBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242AC299CAF9700D8320E /* CountryAssemblyBuilderProtocol.swift */; };
+		576242C0299CAF9700D8320E /* CountryInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242AD299CAF9700D8320E /* CountryInterator.swift */; };
+		576242C1299CAF9700D8320E /* CountryViewOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242AE299CAF9700D8320E /* CountryViewOutputProtocol.swift */; };
+		576242C3299CAF9700D8320E /* CountryRouterInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242B0299CAF9700D8320E /* CountryRouterInputProtocol.swift */; };
+		576242C4299CAF9700D8320E /* CountryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242B2299CAF9700D8320E /* CountryRouter.swift */; };
+		576242C5299CAF9700D8320E /* CountryViewInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242B3299CAF9700D8320E /* CountryViewInputProtocol.swift */; };
+		576242C6299CAF9700D8320E /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242B6299CAF9700D8320E /* CountryTableViewCell.swift */; };
+		576242C7299CAF9700D8320E /* CountryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242B7299CAF9700D8320E /* CountryPresenter.swift */; };
+		576242C9299CAF9700D8320E /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242B9299CAF9700D8320E /* CountryViewController.swift */; };
+		576242DC299CB0B000D8320E /* HotelsRouterInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242CB299CB0B000D8320E /* HotelsRouterInputProtocol.swift */; };
+		576242DD299CB0B000D8320E /* HotelsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242CC299CB0B000D8320E /* HotelsRouter.swift */; };
+		576242DE299CB0B000D8320E /* HotelsInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242CE299CB0B000D8320E /* HotelsInteractorInputProtocol.swift */; };
+		576242DF299CB0B000D8320E /* HotelsInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242CF299CB0B000D8320E /* HotelsInteractorOutputProtocol.swift */; };
+		576242E0299CB0B000D8320E /* HotelsInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242D0299CB0B000D8320E /* HotelsInterator.swift */; };
+		576242E1299CB0B000D8320E /* HotelsViewOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242D2299CB0B000D8320E /* HotelsViewOutputProtocol.swift */; };
+		576242E2299CB0B000D8320E /* HotelsViewInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242D3299CB0B000D8320E /* HotelsViewInputProtocol.swift */; };
+		576242E3299CB0B000D8320E /* HotelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242D4299CB0B000D8320E /* HotelsTableViewCell.swift */; };
+		576242E4299CB0B000D8320E /* HotelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242D5299CB0B000D8320E /* HotelsViewController.swift */; };
+		576242E5299CB0B000D8320E /* HotelsAssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242D7299CB0B000D8320E /* HotelsAssemblyBuilder.swift */; };
+		576242E6299CB0B000D8320E /* HotelsAssemblyBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242D8299CB0B000D8320E /* HotelsAssemblyBuilderProtocol.swift */; };
+		576242E7299CB0B000D8320E /* HotelsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242DA299CB0B000D8320E /* HotelsPresenterProtocol.swift */; };
+		576242E8299CB0B000D8320E /* HotelsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576242DB299CB0B000D8320E /* HotelsPresenter.swift */; };
+		57A675D9299CC32D003533C6 /* Hotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A675D8299CC32D003533C6 /* Hotels.swift */; };
 		63936226A27150D19A12B964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B84415619F4E28C46A93E6B /* Main.storyboard */; };
 		A1483BCE26354F937B6CA3DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7970D3283CD1D2770F7F9EDD /* LaunchScreen.storyboard */; };
 		B1A4B5EA3709CC481A1FF930 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86191EC7BB5E744389854897 /* Strings+Generated.swift */; };
 		BA9A64B63C89DD3EECD58D42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D23E8F7D9746DD3C0352A4C /* SceneDelegate.swift */; };
-		C0B76480EFF897FBD8B74A90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EBDE35FDC640213AE1FB7B /* ViewController.swift */; };
 		E53B60FD667C7979425FD2BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99E65C1ACD7DAC929C9B511 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D91F6C7AD6C965CA229EDAB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1D23E8F7D9746DD3C0352A4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31EBDE35FDC640213AE1FB7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41575C88CE0A50529B439F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57054CD6299C86FF005A15D7 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		57054CED299C8FE1005A15D7 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		57624280299C9C1C00D8320E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		576242A6299CAF9700D8320E /* CountryInteractorInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInteractorInputProtocol.swift; sourceTree = "<group>"; };
+		576242A7299CAF9700D8320E /* CountryInteractorOutputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInteractorOutputProtocol.swift; sourceTree = "<group>"; };
+		576242A8299CAF9700D8320E /* CountryPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPresenterProtocol.swift; sourceTree = "<group>"; };
+		576242AB299CAF9700D8320E /* CountryAssemblyBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryAssemblyBuilder.swift; sourceTree = "<group>"; };
+		576242AC299CAF9700D8320E /* CountryAssemblyBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryAssemblyBuilderProtocol.swift; sourceTree = "<group>"; };
+		576242AD299CAF9700D8320E /* CountryInterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInterator.swift; sourceTree = "<group>"; };
+		576242AE299CAF9700D8320E /* CountryViewOutputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewOutputProtocol.swift; sourceTree = "<group>"; };
+		576242B0299CAF9700D8320E /* CountryRouterInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryRouterInputProtocol.swift; sourceTree = "<group>"; };
+		576242B2299CAF9700D8320E /* CountryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryRouter.swift; sourceTree = "<group>"; };
+		576242B3299CAF9700D8320E /* CountryViewInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewInputProtocol.swift; sourceTree = "<group>"; };
+		576242B6299CAF9700D8320E /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		576242B7299CAF9700D8320E /* CountryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPresenter.swift; sourceTree = "<group>"; };
+		576242B9299CAF9700D8320E /* CountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		576242CB299CB0B000D8320E /* HotelsRouterInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsRouterInputProtocol.swift; sourceTree = "<group>"; };
+		576242CC299CB0B000D8320E /* HotelsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsRouter.swift; sourceTree = "<group>"; };
+		576242CE299CB0B000D8320E /* HotelsInteractorInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsInteractorInputProtocol.swift; sourceTree = "<group>"; };
+		576242CF299CB0B000D8320E /* HotelsInteractorOutputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsInteractorOutputProtocol.swift; sourceTree = "<group>"; };
+		576242D0299CB0B000D8320E /* HotelsInterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsInterator.swift; sourceTree = "<group>"; };
+		576242D2299CB0B000D8320E /* HotelsViewOutputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsViewOutputProtocol.swift; sourceTree = "<group>"; };
+		576242D3299CB0B000D8320E /* HotelsViewInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsViewInputProtocol.swift; sourceTree = "<group>"; };
+		576242D4299CB0B000D8320E /* HotelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsTableViewCell.swift; sourceTree = "<group>"; };
+		576242D5299CB0B000D8320E /* HotelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsViewController.swift; sourceTree = "<group>"; };
+		576242D7299CB0B000D8320E /* HotelsAssemblyBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsAssemblyBuilder.swift; sourceTree = "<group>"; };
+		576242D8299CB0B000D8320E /* HotelsAssemblyBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsAssemblyBuilderProtocol.swift; sourceTree = "<group>"; };
+		576242DA299CB0B000D8320E /* HotelsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsPresenterProtocol.swift; sourceTree = "<group>"; };
+		576242DB299CB0B000D8320E /* HotelsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelsPresenter.swift; sourceTree = "<group>"; };
+		57A675D8299CC32D003533C6 /* Hotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotels.swift; sourceTree = "<group>"; };
 		63AFA274DFBCD6AEFB231EF6 /* Viper.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6509BEAFE592A6AAA76F7787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86191EC7BB5E744389854897 /* Strings+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -33,6 +91,152 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		57054CD3299C83B6005A15D7 /* CountryModule */ = {
+			isa = PBXGroup;
+			children = (
+				576242A5299CAF9700D8320E /* CountryModule */,
+			);
+			path = CountryModule;
+			sourceTree = "<group>";
+		};
+		57054CD8299C88B8005A15D7 /* Entyties */ = {
+			isa = PBXGroup;
+			children = (
+				57054CD6299C86FF005A15D7 /* Country.swift */,
+				57A675D8299CC32D003533C6 /* Hotels.swift */,
+			);
+			path = Entyties;
+			sourceTree = "<group>";
+		};
+		57054CEC299C8FC8005A15D7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				57054CED299C8FE1005A15D7 /* NetworkServiceProtocol.swift */,
+				57624280299C9C1C00D8320E /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		57624284299CADE700D8320E /* HotelsModule */ = {
+			isa = PBXGroup;
+			children = (
+				576242D1299CB0B000D8320E /* View */,
+				576242D9299CB0B000D8320E /* Presenter */,
+				576242CD299CB0B000D8320E /* Interator */,
+				576242D6299CB0B000D8320E /* AssemblyBuilder */,
+				576242CA299CB0B000D8320E /* Router */,
+			);
+			path = HotelsModule;
+			sourceTree = "<group>";
+		};
+		576242A5299CAF9700D8320E /* CountryModule */ = {
+			isa = PBXGroup;
+			children = (
+				576242B5299CAF9700D8320E /* View */,
+				576242A9299CAF9700D8320E /* Presenter */,
+				576242AA299CAF9700D8320E /* AssemblyBuilder */,
+				576242B1299CAF9700D8320E /* Interator */,
+				576242BA299CAF9700D8320E /* Router */,
+			);
+			name = CountryModule;
+			sourceTree = "<group>";
+		};
+		576242A9299CAF9700D8320E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				576242A8299CAF9700D8320E /* CountryPresenterProtocol.swift */,
+				576242B7299CAF9700D8320E /* CountryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		576242AA299CAF9700D8320E /* AssemblyBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				576242AB299CAF9700D8320E /* CountryAssemblyBuilder.swift */,
+				576242AC299CAF9700D8320E /* CountryAssemblyBuilderProtocol.swift */,
+			);
+			path = AssemblyBuilder;
+			sourceTree = "<group>";
+		};
+		576242B1299CAF9700D8320E /* Interator */ = {
+			isa = PBXGroup;
+			children = (
+				576242AD299CAF9700D8320E /* CountryInterator.swift */,
+				576242A7299CAF9700D8320E /* CountryInteractorOutputProtocol.swift */,
+				576242A6299CAF9700D8320E /* CountryInteractorInputProtocol.swift */,
+			);
+			path = Interator;
+			sourceTree = "<group>";
+		};
+		576242B5299CAF9700D8320E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				576242B9299CAF9700D8320E /* CountryViewController.swift */,
+				576242AE299CAF9700D8320E /* CountryViewOutputProtocol.swift */,
+				576242B3299CAF9700D8320E /* CountryViewInputProtocol.swift */,
+				576242B6299CAF9700D8320E /* CountryTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		576242BA299CAF9700D8320E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				576242B2299CAF9700D8320E /* CountryRouter.swift */,
+				576242B0299CAF9700D8320E /* CountryRouterInputProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		576242CA299CB0B000D8320E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				576242CB299CB0B000D8320E /* HotelsRouterInputProtocol.swift */,
+				576242CC299CB0B000D8320E /* HotelsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		576242CD299CB0B000D8320E /* Interator */ = {
+			isa = PBXGroup;
+			children = (
+				576242CE299CB0B000D8320E /* HotelsInteractorInputProtocol.swift */,
+				576242CF299CB0B000D8320E /* HotelsInteractorOutputProtocol.swift */,
+				576242D0299CB0B000D8320E /* HotelsInterator.swift */,
+			);
+			path = Interator;
+			sourceTree = "<group>";
+		};
+		576242D1299CB0B000D8320E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				576242D2299CB0B000D8320E /* HotelsViewOutputProtocol.swift */,
+				576242D3299CB0B000D8320E /* HotelsViewInputProtocol.swift */,
+				576242D4299CB0B000D8320E /* HotelsTableViewCell.swift */,
+				576242D5299CB0B000D8320E /* HotelsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		576242D6299CB0B000D8320E /* AssemblyBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				576242D7299CB0B000D8320E /* HotelsAssemblyBuilder.swift */,
+				576242D8299CB0B000D8320E /* HotelsAssemblyBuilderProtocol.swift */,
+			);
+			path = AssemblyBuilder;
+			sourceTree = "<group>";
+		};
+		576242D9299CB0B000D8320E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				576242DA299CB0B000D8320E /* HotelsPresenterProtocol.swift */,
+				576242DB299CB0B000D8320E /* HotelsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		8218033FC9F533FBCE01535D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +256,10 @@
 		B983E7FEE79FCD55F1A8C622 /* Viper */ = {
 			isa = PBXGroup;
 			children = (
+				57054CD8299C88B8005A15D7 /* Entyties */,
+				57054CEC299C8FC8005A15D7 /* Services */,
+				57054CD3299C83B6005A15D7 /* CountryModule */,
+				57624284299CADE700D8320E /* HotelsModule */,
 				B601DDAF87BF40CA2B5624FE /* AppDelegate.swift */,
 				A99E65C1ACD7DAC929C9B511 /* Assets.xcassets */,
 				8B4A5971FC6A38D9402A6F13 /* Info.plist */,
@@ -60,7 +268,6 @@
 				6B84415619F4E28C46A93E6B /* Main.storyboard */,
 				1D23E8F7D9746DD3C0352A4C /* SceneDelegate.swift */,
 				86191EC7BB5E744389854897 /* Strings+Generated.swift */,
-				31EBDE35FDC640213AE1FB7B /* ViewController.swift */,
 				DB39A6DC3FEE71483BED7AC1 /* XCAssets+Generated.swift */,
 			);
 			path = Viper;
@@ -135,11 +342,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57054CD7299C86FF005A15D7 /* Country.swift in Sources */,
+				576242C1299CAF9700D8320E /* CountryViewOutputProtocol.swift in Sources */,
+				576242BE299CAF9700D8320E /* CountryAssemblyBuilder.swift in Sources */,
+				576242C0299CAF9700D8320E /* CountryInterator.swift in Sources */,
+				57054CEE299C8FE1005A15D7 /* NetworkServiceProtocol.swift in Sources */,
 				479580EC4A2ABEF47707DC9E /* AppDelegate.swift in Sources */,
+				576242C6299CAF9700D8320E /* CountryTableViewCell.swift in Sources */,
 				BA9A64B63C89DD3EECD58D42 /* SceneDelegate.swift in Sources */,
+				576242E5299CB0B000D8320E /* HotelsAssemblyBuilder.swift in Sources */,
+				576242E0299CB0B000D8320E /* HotelsInterator.swift in Sources */,
+				576242BD299CAF9700D8320E /* CountryPresenterProtocol.swift in Sources */,
+				576242DD299CB0B000D8320E /* HotelsRouter.swift in Sources */,
+				576242BF299CAF9700D8320E /* CountryAssemblyBuilderProtocol.swift in Sources */,
+				576242E3299CB0B000D8320E /* HotelsTableViewCell.swift in Sources */,
+				576242DE299CB0B000D8320E /* HotelsInteractorInputProtocol.swift in Sources */,
+				576242C4299CAF9700D8320E /* CountryRouter.swift in Sources */,
+				576242C9299CAF9700D8320E /* CountryViewController.swift in Sources */,
 				B1A4B5EA3709CC481A1FF930 /* Strings+Generated.swift in Sources */,
-				C0B76480EFF897FBD8B74A90 /* ViewController.swift in Sources */,
+				576242BC299CAF9700D8320E /* CountryInteractorOutputProtocol.swift in Sources */,
 				43C4F96560849F707F088838 /* XCAssets+Generated.swift in Sources */,
+				576242C7299CAF9700D8320E /* CountryPresenter.swift in Sources */,
+				576242DF299CB0B000D8320E /* HotelsInteractorOutputProtocol.swift in Sources */,
+				576242C3299CAF9700D8320E /* CountryRouterInputProtocol.swift in Sources */,
+				576242E7299CB0B000D8320E /* HotelsPresenterProtocol.swift in Sources */,
+				576242E8299CB0B000D8320E /* HotelsPresenter.swift in Sources */,
+				576242E6299CB0B000D8320E /* HotelsAssemblyBuilderProtocol.swift in Sources */,
+				576242E2299CB0B000D8320E /* HotelsViewInputProtocol.swift in Sources */,
+				576242E4299CB0B000D8320E /* HotelsViewController.swift in Sources */,
+				576242BB299CAF9700D8320E /* CountryInteractorInputProtocol.swift in Sources */,
+				576242DC299CB0B000D8320E /* HotelsRouterInputProtocol.swift in Sources */,
+				57624281299C9C1C00D8320E /* NetworkService.swift in Sources */,
+				576242E1299CB0B000D8320E /* HotelsViewOutputProtocol.swift in Sources */,
+				57A675D9299CC32D003533C6 /* Hotels.swift in Sources */,
+				576242C5299CAF9700D8320E /* CountryViewInputProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,11 +461,17 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				KEYCHAIN_ENTITLEMENT = N7B9Y8WYA7.ru.viper;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-weak_framework SwiftUI";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
