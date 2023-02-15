@@ -9,6 +9,6 @@ import Foundation
 
 /// Протокол выхода экрана стран
 protocol CountryViewOutputProtocol {
-    func updateCountries()
+    func fetchCountries()
     func didSelectRowAt(index: Int)
 }

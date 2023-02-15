@@ -10,7 +10,7 @@ import Foundation
 /// Протокол презентера экрана стран
 protocol CountryPresenterProtocol: CountryViewOutputProtocol, CountryInteractorOutputProtocol {
     var view: CountryViewInputProtocol? { get }
-    var iterator: CountryInteractorInputProtocol? { get }
+    var interator: CountryInteractorInputProtocol? { get }
     var router: CountryRouterInputProtocol? { get }
-    var countries: [Country] { get }
+    var countries: [Country]? { get }
 }

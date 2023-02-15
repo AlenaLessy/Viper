@@ -20,7 +20,7 @@ final class HotelsAssemblyBuilder: HotelsAssemblyBuilderProtocol {
         var interactor = makeInterator()
         view.presenter = presenter
         interactor.presenter = presenter
-        presenter.iterator = interactor
+        presenter.interator = interactor
         presenter.router = router
         return view
     }

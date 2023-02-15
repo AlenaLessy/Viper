@@ -13,13 +13,13 @@ final class CountryPresenter: CountryPresenterProtocol {
     // MARK: Public Properties
     
     weak var view: CountryViewInputProtocol?
-    var iterator: CountryInteractorInputProtocol? {
+    var interator: CountryInteractorInputProtocol? {
         didSet {
-            iterator?.fetchCountries()
+            interator?.fetchCountries()
         }
     }
     var router: CountryRouterInputProtocol?
-    var countries: [Country] = []
+    var countries: [Country]?
     
     // MARK: - Public Methods
     
@@ -27,8 +27,8 @@ final class CountryPresenter: CountryPresenterProtocol {
         self.countries = countries
     }
     
-    func updateCountries() {
-        iterator?.fetchCountries()
+    func fetchCountries() {
+        interator?.fetchCountries()
     }
     
     func didSelectRowAt(index: Int) {

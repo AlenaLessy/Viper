@@ -12,7 +12,7 @@ final class HotelsRouter: HotelsRouterInputProtocol {
     
     // MARK: - Public Properties
     
-    var assemblyBuilder = HotelsAssemblyBuilder()
+    let assemblyBuilder = HotelsAssemblyBuilder()
 
     // MARK: - Public Methods
       

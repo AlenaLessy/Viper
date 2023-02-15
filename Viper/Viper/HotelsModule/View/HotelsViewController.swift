@@ -28,7 +28,6 @@ class HotelsViewController: UIViewController, HotelsViewInputProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        tableViewConstraint()
     }
 
     // MARK: - Public Methods
@@ -49,6 +48,7 @@ class HotelsViewController: UIViewController, HotelsViewInputProtocol {
         )
         presenter?.updateHotels()
         view.backgroundColor = UIColor(asset: Images.someColor)
+        tableViewConstraint()
     }
     
     private func tableViewConstraint() {

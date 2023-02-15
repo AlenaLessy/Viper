@@ -27,7 +27,6 @@ class CountryViewController: UIViewController, CountryViewInputProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        tableViewConstraint()
     }
 
     // MARK: - Public Methods
@@ -37,7 +36,7 @@ class CountryViewController: UIViewController, CountryViewInputProtocol {
     }
     
     // MARK: - Private Methods
-
+    
     private func configureTableView() {
         view.addSubview(tableView)
         tableView.dataSource = self
@@ -46,9 +45,10 @@ class CountryViewController: UIViewController, CountryViewInputProtocol {
             CountryTableViewCell.self,
             forCellReuseIdentifier: Constants.countryTableViewCellIdentifier
         )
-        presenter?.updateCountries()
+        presenter?.fetchCountries()
         tableView.backgroundColor = UIColor(asset: Images.someColor)
         view.backgroundColor = UIColor(asset: Images.someColor)
+        tableViewConstraint()
     }
     
     private func tableViewConstraint() {
@@ -64,14 +64,14 @@ class CountryViewController: UIViewController, CountryViewInputProtocol {
 /// UITableViewDataSource
 extension CountryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter?.countries.count ?? 0
+        presenter?.countries?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.countryTableViewCellIdentifier)
             as? CountryTableViewCell
         else { return UITableViewCell() }
-        guard let country = presenter?.countries[indexPath.row] else { return UITableViewCell()}
+        guard let country = presenter?.countries?[indexPath.row] else { return UITableViewCell()}
         cell.configure(country: country)
         return cell
     }

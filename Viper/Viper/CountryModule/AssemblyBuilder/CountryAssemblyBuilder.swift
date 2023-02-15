@@ -20,7 +20,7 @@ final class CountryAssemblyBuilder: CountryAssemblyBuilderProtocol {
         view.presenter = presenter
         presenter.view = view
         interactor.presenter = presenter
-        presenter.iterator = interactor
+        presenter.interator = interactor
         presenter.router = router
         return view
     }

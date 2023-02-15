@@ -12,9 +12,12 @@ final class CountryRouter: CountryRouterInputProtocol {
     
     // MARK: - Public Properties
     
-    var assemblyBuilder: CountryAssemblyBuilderProtocol?
-    var navigationController: UINavigationController?
-     private var hotelRouter = HotelsRouter()
+    let assemblyBuilder: CountryAssemblyBuilderProtocol?
+    let navigationController: UINavigationController?
+    
+    // MARK: - Private Properties
+    
+     private let hotelRouter = HotelsRouter()
 
     // MARK: - Initializers
     
